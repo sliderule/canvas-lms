@@ -35,7 +35,7 @@ gem 'oauth',          '0.4.5'
 gem 'rack',           '~> 1.1.2' # rails requires ~> 1.1.0 but 1.1.0 has a param quoting bug
 gem 'rake',           '< 0.10'
 gem 'ratom-instructure', '0.6.9', :require => "atom" # custom gem until necessary changes are merged into mainstream
-gem 'rbx-require-relative', '0.0.5'
+gem 'rbx-require-relative', '0.0.5', :platform => :mri_18
 gem 'rdiscount',      '1.6.8'
 gem 'require_relative', '1.0.1'
 gem 'ritex',          '1.0.1'
@@ -82,7 +82,8 @@ group :development do
   gem 'coffee-script'
   gem 'coffee-script-source',  '1.1.2' #pinned so everyone's compiled output matches
   gem 'parallel',     '0.5.16'
-  gem 'ruby-debug',   '0.10.4'
+  gem 'ruby-debug',   '0.10.4', :platform => :mri_18
+  gem 'ruby-debug19', '0.11.6', :require => 'ruby-debug', :platform => :mri_19
   gem 'ruby_parser', '2.0.6'
   gem 'sexp_processor', '3.0.5'
   gem 'ya2yaml', '0.30'
